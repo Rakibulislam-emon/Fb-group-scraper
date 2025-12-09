@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "FB Job Scraper",
+  "version": "1.0.0",
+  "description": "Scrapes job posts from Facebook Groups safely and locally.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "activeTab",
+    "notifications",
+    "unlimitedStorage"
+  ],
+  "host_permissions": ["*://*.facebook.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "FB Scraper Control"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["dashboard/index.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/groups/*"],
+      "js": ["utils.js", "content.js"]
+    }
+  ]
+}

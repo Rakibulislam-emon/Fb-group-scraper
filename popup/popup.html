@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FB Scraper</title>
+    <link rel="stylesheet" href="../lib/tailwind.css">
+</head>
+
+<body class="w-80 p-4 font-sans text-gray-800 bg-white">
+    <div class="flex justify-between items-center mb-4 border-b pb-2">
+        <h2 class="text-lg font-bold text-blue-600">FB Scraper</h2>
+        <button id="openDashboard"
+            class="bg-gray-100 hover:bg-gray-200 border border-gray-300 text-xs px-2 py-1 rounded">Dashboard ↗</button>
+    </div>
+
+    <div class="flex items-center bg-gray-100 p-2.5 rounded-md mb-3">
+        <div id="statusIndicator" class="w-2.5 h-2.5 rounded-full mr-2.5 bg-gray-400"></div>
+        <span id="statusText" class="text-sm">Idle</span>
+    </div>
+
+    <div class="text-xs text-center text-gray-500 mb-3" id="progressInfo" style="display:none;">
+        Group: <span id="currentGroup">0</span> / <span id="totalGroups">0</span>
+    </div>
+
+    <div class="flex flex-col gap-2.5 mb-4">
+        <button id="startScrape"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-md text-sm w-full">Start
+            Scraping</button>
+        <button id="stopScrape"
+            class="bg-white text-red-600 border border-red-600 hover:bg-red-50 font-bold py-2.5 rounded-md text-sm w-full hidden"
+            disabled>Stop</button>
+    </div>
+
+    <div class="text-center text-xs">
+        <a href="#" id="openOptions" class="text-gray-500 hover:underline">Settings</a>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

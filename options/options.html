@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>FB Scraper Options</title>
+  <link rel="stylesheet" href="../lib/tailwind.css">
+</head>
+
+<body class="bg-gray-100 p-10 font-sans text-gray-800">
+  <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+    <h1 class="text-2xl font-bold text-blue-600 mb-6">Configuration</h1>
+
+    <div class="mb-6">
+      <label for="groupLinks" class="block mb-2 font-semibold text-gray-700">Facebook Group Links (One per line)</label>
+      <textarea id="groupLinks"
+        class="w-full h-48 p-3 border border-gray-300 rounded-md font-mono text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y"
+        placeholder="https://www.facebook.com/groups/123456..."></textarea>
+      <p class="text-xs text-gray-500 mt-2">Enter full URLs including https://</p>
+    </div>
+
+    <div id="status" class="h-6 mb-4 text-sm font-medium"></div>
+
+    <button id="save"
+      class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded transition duration-200">
+      Save Settings
+    </button>
+  </div>
+  <script src="options.js"></script>
+</body>
+
+</html>
