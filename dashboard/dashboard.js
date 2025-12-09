@@ -6,7 +6,7 @@ const DEFAULT_KEYWORDS = {
   hiring:
     "hiring, looking for, we need, urgent, immediately, asap, vacancy, opportunity, remote, work from home, wfh, worldwide, apply now, send cv, send resume, dm me, recruiter, join our team, position available, job opening",
   money:
-    "$, usd, k/month, per month, monthly, salary, budget, package, hourly, rate, compensation, paid, negotiable, competitive",
+    "$, usd, k/month, per month, monthly, salary, budget, package, hourly, rate, compensation, paid, negotiable, competitive ,bdt",
 };
 
 function App() {
